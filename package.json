@@ -1,0 +1,26 @@
+{
+  "name": "otica_solares_site",
+  "version": "1.0.0",
+  "description": ".",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Scitec-Jr/Otica_Solares_Site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Scitec-Jr/Otica_Solares_Site/issues"
+  },
+  "homepage": "https://github.com/Scitec-Jr/Otica_Solares_Site#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {}
+}

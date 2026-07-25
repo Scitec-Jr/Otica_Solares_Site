@@ -1,0 +1,45 @@
+
+
+body {
+   font-family: 'Inria Sans', sans-serif !important;
+   margin: 0;
+   padding: 0;
+}
+
+.footer {
+    width: 100%;
+    padding: 40px 0;
+    display: flex
+    
+}
+
+.footer-container{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+    height: auto;
+}
+
+.footer-divider{
+    width: 1px;
+    height: 200px;
+    background-color: #243C93;
+}
+
+
+.footer-text{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    color: #243C93;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.3;
+}
