@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/produtos.css">
 </head>
 <body>
     <header>
@@ -18,16 +19,115 @@
                 <img src="/images/logo.png" alt="Ótica Solares" class="header-logo">
             </div>
          <nav class="header-nav">
-                <a href="/">Home</a>
+                <a href="/">Início</a>
                 <a href="/sobre">Sobre Nós</a>
-                <a href="/produtos">Produtos</a>
+                <a href="/produtos" class="active">Produtos</a>
                 <a href="/galeria">Galeria</a>
                 <a href="/contato">Contato</a>
             </nav>
         </div>
     </header>
-    <h1>produtos</h1>
 
+    <div class="sub-header">
+    <nav class="sub-header-menu">
+        <div class="sub-header-container">
+            <a href="#" class="active">Destaques</a>
+            <a href="#">Verão</a>
+            <a href="#">Com Grau</a>
+            <a href="#">Coleção Kids</a>
+            <a href="#">Lançamentos</a>
+        </div>
+    </nav>
+
+    <div class="sub-header-busca">
+        <div class="sub-header-container busca-container">
+            <form class="box-pesquisa">
+                <input type="text" placeholder="Pesquisar">
+                <button type="submit" aria-label="Buscar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+   
+    <h1>EM DESTAQUE</h1>
+
+    <div class="grid-produtos">
+        <div class="card-produto">
+            <img src="/images/oculos1.png" alt="Modelo Pierre Caudin" class="card-produto-img">
+            <div class="info-produto">
+                <h3>Modelo Pierre Caudin</h3>
+            </div>
+        </div>
+         <div class="card-produto">
+            <img src="/images/oculos2.png" alt="Modelo Pierre Caudin" class="card-produto-img">
+            <div class="info-produto">
+                <h3>Polaroid Eyewear</h3>
+            </div>
+        </div>
+         <div class="card-produto">
+            <img src="/images/oculos3.png" alt="Modelo Pierre Caudin" class="card-produto-img">
+            <div class="info-produto">
+                <h3>Seventh Street Betha Titanium - Safio</h3>
+            </div>
+        </div>
+        <div class="card-produto">
+            <img src="/images/oculos1.png" alt="Modelo Pierre Caudin" class="card-produto-img">
+            <div class="info-produto">
+                <h3>Modelo Pierre Caudin</h3>
+            </div>
+        </div>
+         <div class="card-produto">
+            <img src="/images/oculos2.png" alt="Modelo Pierre Caudin" class="card-produto-img">
+            <div class="info-produto">
+                <h3>Polaroid Eyewear</h3>
+            </div>
+        </div>
+         <div class="card-produto">
+            <img src="/images/oculos3.png" alt="Modelo Pierre Caudin" class="card-produto-img">
+            <div class="info-produto">
+                <h3>Seventh Street Betha Titanium - Safio</h3>
+            </div>
+        </div>
+        <div class="card-produto oculto">
+            <img src="/images/oculos1.png" alt="Modelo Pierre Caudin" class="card-produto-img">
+            <div class="info-produto">
+                <h3>Modelo Pierre Caudin</h3>
+            </div>
+        </div>
+        <div class="card-produto oculto">
+            <img src="/images/oculos1.png" alt="Modelo Pierre Caudin" class="card-produto-img">
+            <div class="info-produto">
+                <h3>Modelo Pierre Caudin</h3>
+            </div>
+        </div>
+        <div class="card-produto oculto">
+            <img src="/images/oculos1.png" alt="Modelo Pierre Caudin" class="card-produto-img">
+            <div class="info-produto">
+                <h3>Modelo Pierre Caudin</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-carregar-mais">
+        <button class="btn-carregar-mais">Carregar mais</button>
+    </div>
+
+    <section class="banner-contato">
+        <div class="banner-contato-container">
+            <h2>Se interessou por alguma peça?<br>Entre em contato!</h2>
+
+            <div class="banner-botoes">
+                <a class="btn-whatsapp">
+                    WhatsApp
+                </a>
+                <a href="/contato" class="btn-formas-contato">Formas de contato</a>      
+            </div>
+        </div>
+    </section>
 
 
     <footer>

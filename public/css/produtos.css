@@ -1,0 +1,247 @@
+h1 {
+    text-align: left;
+    margin-left: 20%;
+    margin-top: 40px;
+    font-size: 38px;
+    font-weight: 800;
+    font-family: 'Hubot Sans', sans-serif;
+    color: #F07122;
+}
+
+.sub-header {
+    width: 100%;
+}
+
+.sub-header-container {
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.sub-header-menu {
+    background-color: #21409A; 
+    padding: 30px 0;
+}
+
+.sub-header-menu .sub-header-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.sub-header-menu a {
+    color: rgba(255, 255, 255, 0.8); 
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 400;
+    transition: opacity 0.2s, font-weight 0.2s;
+  
+}
+
+.sub-header-menu a:hover,
+.sub-header-menu a.active {
+    color: #ffffff;
+    font-weight: 700; 
+    opacity: 1;
+}
+
+.sub-header-busca {
+    background-color: #ffffff;
+    padding: 20px 0;
+    border-bottom: 1px solid #000000; 
+}
+
+.busca-container {
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.box-pesquisa {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.box-pesquisa input {
+    background-color: #ededed; 
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    padding: 20px 24px;
+    font-size: 1.2rem;
+    color: #333;
+    width: 400px;
+    box-shadow: none;
+}
+
+.box-pesquisa input::placeholder {
+    color: #999;
+}
+
+.box-pesquisa button {
+    background-color: #F07122; 
+    border: none;
+    border-radius: 12px;
+    padding: 24px 24px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.box-pesquisa button:hover {
+    background-color: #d95e12;
+}
+
+@media (max-width: 768px) {
+    .sub-header-menu .sub-header-container {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .busca-container {
+        justify-content: center;
+    }
+
+    .box-pesquisa input {
+        width: 100%;
+    }
+}
+
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    margin: 30px auto 40px;
+    margin-top: 40px;
+    max-width: 1200px;
+    width: 90%;
+    justify-items: center;
+
+}
+
+.card-produto {
+    width: 100%;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2);
+    transition: .3s;
+}
+
+.card-produto:hover {
+    transform: translateY(-8px);
+}
+
+.card-produto img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.info-produto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 10px;
+}
+
+.info-produto h3 {
+    color: black;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    font-family: 'Inria Sans', sans-serif;
+    font-weight: 800;
+   
+}
+
+.card-produto.oculto {
+    display: none;
+}
+
+.container-carregar-mais {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 60px;
+}
+
+.btn-carregar-mais {
+    background: #F07122;
+    color: #fff;
+    font: bold 1.1rem Inria Sans, sans-serif;
+    font-size: 1.7rem;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-carregar-mais:hover {
+    background: #d95e12;
+    transform: translateY(-2px);
+}
+
+.banner-contato {
+    background: #F07122;
+    padding: 30px 0px;
+}
+
+.banner-contato-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 90%;
+}
+
+.banner-contato h2 {
+    color: #fff;
+    font-size: 2.0rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+.banner-botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 250px;
+}
+
+.btn-whatsapp, .btn-formas-contato {
+    font: bold 1.1rem sans-serif;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: .2s;
+}
+
+.btn-whatsapp:hover, .btn-formas-contato:hover {
+    transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+    background: #fff;
+    color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.1);
+}
+.btn-whatsapp svg { fill: #25D366; }
+
+.btn-formas-contato { background: #21409A; color: #fff; }
+.btn-formas-contato:hover { background: #183075; }
+
+@media (max-width: 768px) {
+    .banner-contato-container { flex-direction: column; text-align: center; }
+    .banner-botoes { width: 100%; max-width: 300px; }
+}
