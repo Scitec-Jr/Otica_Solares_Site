@@ -1,0 +1,182 @@
+.banner img{
+    width:100%;
+    display:block;
+}
+
+.modelos{
+    max-width:1200px;
+    margin:0px auto;
+    padding:0 20px;
+}
+
+.modelos-topo{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:35px;
+}
+
+.modelos-topo h2{
+    color:#29469D;
+    font-size:42px;
+    font-family:"Inria Sans";
+}
+
+.btn-vermais{
+    background:#F47B20;
+    color:white;
+    text-decoration:none;
+    padding:12px 30px;
+    border-radius:12px;
+    font-weight:bold;
+}
+
+.cards-modelos{
+    display:flex;
+    gap:25px;
+}
+
+.card{
+    flex:1;
+}
+
+.card img{
+    width:100%;
+    border-radius:14px;
+}
+
+.card h3{
+    margin-top:15px;
+    font-size:26px;
+    color:#222;
+}
+
+.compromisso{
+    background: #ff6633;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 100px; 
+
+    padding: 80px 120px;
+}
+
+.compromisso-texto{
+    max-width:650px;
+}
+
+.compromisso h2{
+    font-size:60px;
+    line-height:1.1;
+    margin-bottom:30px;
+}
+
+.compromisso span{
+    color:#29469D;
+}
+
+.compromisso p{
+    font-size:24px;
+    line-height:1.8;
+}
+
+.compromisso-logo img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px; 
+    max-width: 100%;
+}
+
+.unidades{
+    padding:80px;
+}
+
+.unidades h2{
+    color:#F47B20;
+    font-size:50px;
+    margin-bottom:50px;
+}
+
+.slider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:40px;
+}
+
+.card-unidade{
+    display:flex;
+    width:900px;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+}
+
+.imagem{
+    width:50%;
+}
+
+.imagem img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.info{
+    width:50%;
+    padding:40px;
+}
+
+.info h3{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.info p{
+    margin-bottom:10px;
+}
+
+.seta{
+    font-size:60px;
+    border:none;
+    background:none;
+    color:#29469D;
+    cursor:pointer;
+}
+
+.info-item{
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 18px 0;
+}
+
+.info-item p,
+.info-item a{
+    margin: 0;
+    font-size: 16px;
+    color: #29469D;
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+.cidade{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.cidade img{
+    width: 32px;
+    height: 32px;
+}
+
+.cidade h3{
+    margin: 0;
+    font-size: 42px;
+}
