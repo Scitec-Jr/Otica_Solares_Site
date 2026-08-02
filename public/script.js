@@ -13,3 +13,19 @@ if (btnCarregar) {
     }
   });
 }
+
+const form = document.getElementById("form-contato");
+const msg = document.getElementById("mensagem");
+
+form.addEventListener("submit", function(event){
+
+    // Impede o envio apenas para testar
+    event.preventDefault();
+
+    msg.classList.add("show");
+
+    setTimeout(() => {
+        msg.classList.remove("show");
+    }, 3000);
+
+});

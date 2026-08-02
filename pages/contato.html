@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/contato.css">
 </head>
 <body>
     <header>
@@ -26,9 +27,72 @@
             </nav>
         </div>
     </header>
-    <h1>contato</h1>
+    
+    <main class="contato">
+        <section class="contato-container">
+            <div class="contato-info">
+                <h1>Entre em contato</h1>
+                <div class="unidade">
+                    <h3>Unidade Belém</h3>
+                    <div class="telefone">
+                        <img src="/images/telefone.png">
+                        <span>(91) 3276-5539</span>
+                    </div>
+                </div>
+                <div class="unidade">
+                    <h3>Unidade Tomé-Açu</h3>
+                    <div class="telefone">
+                        <img src="/images/telefone.png">
+                        <span>(91) 99244-4544</span>
+                    </div>
+                </div>
+                <div class="unidade">
+                    <h3>Unidade Mocajuba</h3>
+                    <div class="telefone">
+                        <img src="/images/telefone.png">
+                        <span>(91) 98621-9117</span>
+                    </div>
+                </div>
+                <div class="redes">
+                    <img src="/images/instagram.png">
+                    <img src="/images/whatsapp.png">
+                    <img src="/images/facebook.png">
+                </div>
+            </div>
+            <div class="contato-form">
+                <form class="formulario" id="form-contato" action="https://formsubmit.co/emailteste@gmail.com" method="POST">
+                    <label>Nome *</label>
+                    <input type="text" name="nome" required>
 
+                    <label>E-mail *</label>
+                    <input type="email" name="email" required>
 
+                    <label>Telefone *</label>
+                    <input type="tel" name="telefone">
+
+                    <label>Mensagem *</label>
+                    <textarea name="mensagem" required></textarea>
+
+                    <div class="form-bottom">
+                        <select name="unidade" required>
+                            <option>Unidade</option>
+                            <option>Belém</option>
+                            <option>Tomé-Açu</option>
+                            <option>Mocajuba</option>
+                        </select>
+                        <button type="submit">
+                            Enviar
+                        </button>
+                    </div>
+
+                    <div id="mensagem" class="mensagem">
+                        ✅ Mensagem enviada com sucesso!
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
 
     <footer>
         <div class="footer-container">
