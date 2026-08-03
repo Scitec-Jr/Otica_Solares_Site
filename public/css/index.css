@@ -22,33 +22,79 @@
     font-family:"Inria Sans";
 }
 
-.btn-vermais{
-    background:#F47B20;
-    color:white;
-    text-decoration:none;
-    padding:12px 30px;
-    border-radius:12px;
-    font-weight:bold;
+/* 1. Adicione a borda transparente e 'border-box' no botão normal */
+.btn-vermais {
+    background: #F47B20;
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 12px;
+    font-weight: bold;
+    display: inline-block;
+    
+    /* Borda transparente reservando o espaço */
+    border: 2px solid transparent; 
+    box-sizing: border-box;
+
+    transition: all 0.3s ease;
 }
 
-.cards-modelos{
-    display:flex;
-    gap:25px;
+/* 2. No hover, troque a cor da borda para preto e tire o box-shadow */
+.btn-vermais:hover {
+    background: white;
+    transform: translateY(-2px);
+    border-color: black; /* <--- Aqui entra a borda preta! */
+    color: black;
 }
 
-.card{
-    flex:1;
+/* --- CARDS DOS MODELOS --- */
+.cards-modelos {
+    display: flex;
+    gap: 25px;
+    padding: 15px 0; /* Espaço para a sombra do hover não cortar nas bordas */
 }
 
-.card img{
-    width:100%;
-    border-radius:14px;
+.card {
+    flex: 1;
+    cursor: pointer;
+    border-radius: 14px;
+    
+    /* Transição suave para levantar o card */
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.card h3{
-    margin-top:15px;
-    font-size:26px;
-    color:#222;
+.card img {
+    width: 100%;
+    border-radius: 14px;
+    display: block;
+    
+    /* Transição suave para o efeito na imagem */
+    transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.card h3 {
+    margin-top: 15px;
+    font-size: 26px;
+    color: #222;
+    transition: color 0.3s ease;
+}
+
+/* --- HOVER DOS MODELOS DE ÓCULOS --- */
+
+/* 1. O card sobe levemente e ganha uma sombra macia */
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* 2. A imagem ganha um leve zoom (scale) e fica um pouco mais vibrante */
+.card:hover img {
+    transform: scale(1.03);
+    filter: brightness(1.05);
+}
+
+/* 3. O título muda suavemente para o azul da marca */
+.card:hover h3 {
+    color: #29469D;
 }
 
 .compromisso{
@@ -105,15 +151,6 @@
     align-items:center;
     justify-content:center;
     gap:40px;
-}
-
-.card-unidade{
-    display:flex;
-    width:900px;
-    background:white;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 5px 20px rgba(0,0,0,.2);
 }
 
 .imagem{
@@ -179,4 +216,31 @@
 .cidade h3{
     margin: 0;
     font-size: 42px;
+}
+
+/* Adicione estas propriedades para limitar a visualização */
+.slider-container {
+    overflow: hidden;
+    width: 900px;
+    max-width: 100%;
+
+    /* Adiciona espaço para a sombra não ser cortada */
+    padding: 20px 10px; 
+    margin: -20px -10px; 
+}
+
+.slider-track {
+    display: flex;
+    gap: 30px; /* <--- Espaço entre um card e outro */
+    transition: transform 0.4s ease-in-out;
+}
+
+.card-unidade {
+    display: flex;
+    width: 100%;
+    flex-shrink: 0; /* Impede que os cards fiquem menores ao adicionar o gap */
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,.2);
 }
