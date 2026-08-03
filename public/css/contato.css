@@ -12,8 +12,8 @@
 }
 
 .contato-container {
-    max-width: 1200px;   /* limita a largura */
-    margin: 0 auto;      /* centraliza na página */
+    max-width: 1200px;   
+    margin: 0 auto;     
 
     display: flex;
     justify-content: center;
@@ -70,7 +70,6 @@
     transition: border-color 0.3s ease;
 }
 
-/* --- FORM-BOTTOM ESTILIZADO E BONITO --- */
 .form-bottom {
     display: flex;
     justify-content: space-between;
@@ -93,12 +92,10 @@
     cursor: pointer;
     outline: none;
     
-    /* Remove a seta feia padrão do navegador */
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
 
-    /* Seta customizada elegante em azul */
     background-image: url("data:image/svg+xml;utf8,<svg fill='%2329469D' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
     background-repeat: no-repeat;
     background-position: right 10px center;
@@ -111,7 +108,6 @@
     background-color: #f8f9fa;
 }
 
-/* Botão Enviar Estilizado */
 .formulario button {
     width: 140px;
     height: 46px;
@@ -138,7 +134,6 @@
     color: #999;
 }
 
-/* --- INFORMAÇÕES DE CONTATO E TELEFONE --- */
 .contato-info h1 {
     font-size: 60px;
     color: #29469D;
@@ -166,11 +161,10 @@
     width: 28px;
     height: 28px;
     
-    /* Converte a imagem/ícone para preto puro */
     filter: brightness(0) saturate(100%);
 }
 
-/* TELEFONE PRETO (garante texto e links em preto absoluto) */
+
 .telefone span,
 .telefone a,
 .telefone p {

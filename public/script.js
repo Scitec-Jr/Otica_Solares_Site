@@ -26,7 +26,7 @@ if (form && msg) {
   });
 }
 
-// Carrossel dos cards das unidades (COM ESPAÇAMENTO CALCULADO)
+// Carrossel dos cards das unidades
 const track = document.querySelector(".slider-track");
 const direita = document.querySelector(".direita");
 const esquerda = document.querySelector(".esquerda");
@@ -36,10 +36,10 @@ if (track && direita && esquerda && cards.length > 0) {
   const total = cards.length;
   let index = 0;
 
-  // Função para mover o slider levando em conta o tamanho do card + espaço
+  
   function atualizarCarrossel() {
-    const cardWidth = cards[0].offsetWidth; // Largura exata do card
-    const gap = 30; // Mesma distância definida no CSS (gap: 30px)
+    const cardWidth = cards[0].offsetWidth; 
+    const gap = 30; 
     const deslocamento = index * (cardWidth + gap);
     
     track.style.transform = `translateX(-${deslocamento}px)`;
