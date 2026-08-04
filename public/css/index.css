@@ -45,7 +45,6 @@
     color: black;
 }
 
-/* --- CARDS DOS MODELOS --- */
 .cards-modelos {
     display: flex;
     gap: 25px;
@@ -77,7 +76,6 @@
     transition: color 0.3s ease;
 }
 
-/* --- HOVER DOS MODELOS DE ÓCULOS --- */
 .card:hover {
     transform: translateY(-8px);
 }

@@ -236,7 +236,10 @@ h1 {
     gap: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,.1);
 }
-.btn-whatsapp svg { fill: #25D366; }
+.btn-whatsapp svg { 
+    fill: #25D366;
+    flex-shrink: 0;
+}
 
 .btn-formas-contato { background: #21409A; color: #fff; }
 .btn-formas-contato:hover { background: #183075; }
