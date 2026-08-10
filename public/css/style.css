@@ -36,9 +36,10 @@ header::before {
 }
 
 .header-logo {
-    max-width: 300px;
+    max-width: 180px;
     height: auto;
     display: block;
+    margin-left: 2rem;
 }
 
 .header-nav {

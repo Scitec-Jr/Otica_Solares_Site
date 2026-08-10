@@ -29,18 +29,20 @@
     max-width: 1200px;
     width: 100%;
     gap: 50px;
+    padding: 0 20px;
 }
 
 .sobre-titulo h2 {
     color: #ffffff;
     font-family: 'Hubot Sans', sans-serif;
-    font-size: 4.5rem;
-    font-weight: 800;
+    font-size: 5.7rem;
+    font-weight: 700;
     line-height: 0.95;
     margin: 0;
-    text-transform: uppercase;
-    font-family: sans-serif; 
+    margin-left: 3.6rem;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    letter-spacing: -0.02em;
+    
 }
 
 .sobre-texto {
@@ -53,11 +55,28 @@
 .sobre-texto p {
     color: #ffffff;
     font-family: 'Inria Sans', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.65rem;
     line-height: 1.5;
     margin: 0;
     font-weight: 500;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.sobre-trajetoria {
+    margin-left: 3.8rem;
+    letter-spacing: -0.02em;
+}
+
+.sobre-trajetoria h2 {
+    color: #243C93;
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+.sobre-trajetoria p {
+    color: #0000008f;
+    font-size: 1.4rem;
+    margin-top: .6rem;
 }
 
 @media (max-width: 768px) {
