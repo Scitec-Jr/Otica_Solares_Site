@@ -1,12 +1,12 @@
 .sobre-nos {
     position: relative;
     width: 100%;
-    min-height: 450px;
+    min-height: 500px;
     background: url('/images/paisagem_sobre.png') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 60px 20px;
+    padding: 100px 20px;
     box-sizing: border-box;
 }
 
@@ -28,20 +28,21 @@
     justify-content: space-between;
     max-width: 1200px;
     width: 100%;
-    gap: 50px;
-    padding: 0 20px;
+    gap: 80px;
+    padding: 0 40px;
 }
 
 .sobre-titulo h2 {
     color: #ffffff;
     font-family: 'Hubot Sans', sans-serif;
-    font-size: 6rem;
-    font-weight: 650;
+    font-size: 7.3rem;
+    line-height: 1.4;
+    font-weight: 700;
     line-height: 0.95;
     margin: 0;
     margin-left: 3.6rem;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.04em;
     
 }
 
@@ -56,10 +57,11 @@
     color: #ffffff;
     font-family: 'Inria Sans', sans-serif;
     font-size: 1.65rem;
-    line-height: 1.5;
+    line-height: 1.7;
     margin: 0;
     font-weight: 500;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.5rem;
 }
 
 .sobre-trajetoria {
@@ -79,10 +81,6 @@
     margin-top: .6rem;
 }
 
-/* =========================================
-   NOSSA TRAJETÓRIA
-========================================= */
-
 .sobre-timeline {
     position: relative;
 
@@ -98,80 +96,52 @@
     align-items: center;
 }
 
-
-/* LINHA HORIZONTAL */
-
 .sobre-timeline::before {
     content: "";
-
     position: absolute;
-
     left: 10%;
     right: 3%;
     top: 50%;
-
     height: 3px;
-
     background-color: #F07122;
-
     transform: translateY(-50%);
-
     z-index: 0;
 }
 
 .seta {
     position: absolute;
-
     right: 3%;
     top: 50%;
-
     width: 15px;
     height: 15px;
-
     border-top: 3px solid #F07122;
     border-right: 3px solid #F07122;
-
     transform: translateY(-50%) rotate(45deg);
-
     z-index: 5;
 }
 
-/* CADA EVENTO */
-
 .sobre-evento {
     position: relative;
-
     width: 20%;
     height: 100%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     z-index: 1;
 }
-
-
-/* BOLINHA */
 
 .sobre-ponto {
     width: 25px;
     height: 25px;
-
     border: 3px solid #F07122;
     border-radius: 50%;
-
     background: white;
-
     position: relative;
     z-index: 5;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     cursor: pointer;
-
     transition: 
         width 0.4s ease,
         height 0.4s ease,
@@ -181,42 +151,23 @@
 .sobre-ponto:hover {
     width: 150px;
     height: 150px;
-
     border-radius: 50%;
-
     border: 4px solid #f07122;
-
     background: white;
-
     z-index: 20;
 }
 
-
-
-/* ANO */
-
 .sobre-ponto span {
     position: absolute;
-
     top: 30px;
     left: 50%;
-
     transform: translateX(-50%);
-
     color: #243C93;
-
     font-family: 'Inria Sans', sans-serif;
-
     font-size: 1.6rem;
     font-weight: 500;
-
     white-space: nowrap;
 }
-
-
-/* BOLINHAS PREENCHIDAS
-   2015, 2020 e 2026
-*/
 
 .sobre-evento:nth-child(1) .sobre-ponto,
 .sobre-evento:nth-child(3) .sobre-ponto,
@@ -224,49 +175,29 @@
     background-color: #F07122;
 }
 
-
-/* TEXTO DOS EVENTOS */
-
 .sobre-conteudocima,
 .sobre-conteudobaixo {
     position: absolute;
-
     width: 240px;
-
     text-align: center;
-
     color: #222222;
-
     font-family: 'Inria Sans', sans-serif;
 }
-
-
-/* TEXTO ACIMA DA LINHA */
 
 .sobre-conteudocima {
     bottom: calc(50% + 35px);
 }
 
-
-/* TEXTO ABAIXO DA LINHA */
-
 .sobre-conteudobaixo {
     top: calc(50% + 43px);
 }
 
-
-/* TÍTULO DO EVENTO */
-
 .sobre-conteudocima h3,
 .sobre-conteudobaixo h3 {
     margin: 0;
-
     font-size: 1.6rem;
-
     line-height: 1.35;
-
     font-weight: 500;
-
     color: #000000;
 }
 
@@ -276,7 +207,6 @@
     margin-top: 60px;
 }
 
-/* Os dois cards */
 .card-missao,
 .card-visao {
     width: 50%;
@@ -284,7 +214,6 @@
     padding: 45px;
 }
 
-/* Card Missão */
 .card-missao {
     background-color: #ffffff;
     color: #243c93;
@@ -293,20 +222,17 @@
 
 }
 
-/* Card Visão */
 .card-visao {
     background-color: #243c93;
     color: #ffffff;
 }
 
-/* Títulos */
 .card-missao h2,
 .card-visao h2 {
     font-size: 4rem;
     margin-bottom: 4rem;
 }
 
-/* Textos */
 .card-missao p,
 .card-visao p {
     font-size: 1.3rem;
@@ -316,4 +242,58 @@
 
 .card-missao p {
     color: #000000;
+}
+
+.NossosValores {
+    background: url('/images/fundo2-sobre.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+    padding: 3rem 1.5rem;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    row-gap: 2.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 4rem;
+    row-gap: 3.6rem;
+}
+
+.card-valor1, .card-valor2, .card-valor3, .card-valor4, .card-valor5, .card-valor6 {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 1.1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    aspect-ratio: 1/1;
+    font-size: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.card-valor1 h2, .card-valor2 h3, .card-valor3 h3, .card-valor4 h3, .card-valor5 h3, .card-valor6 h3 {
+    margin-bottom: 0.2;
+    font-size: 1.7rem;
+    
+}
+.card-valor1 h2 .card-valor2 p, .card-valor3 p, .card-valor4 p, .card-valor5 p, .card-valor6 p {
+    margin-top: 0;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+.card-valor1 {
+    background-color: #F07122;
+    color: white;
+}
+
+.card-valor1 h2 {
+    font-size: 3rem;
+    letter-spacing: -0.07em;
+}
+.VALORES {
+    color: #243C93;
 }
