@@ -35,8 +35,8 @@
 .sobre-titulo h2 {
     color: #ffffff;
     font-family: 'Hubot Sans', sans-serif;
-    font-size: 5.7rem;
-    font-weight: 700;
+    font-size: 6rem;
+    font-weight: 650;
     line-height: 0.95;
     margin: 0;
     margin-left: 3.6rem;
@@ -79,18 +79,241 @@
     margin-top: .6rem;
 }
 
-@media (max-width: 768px) {
-    .sobre-container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 30px;
-    }
+/* =========================================
+   NOSSA TRAJETÓRIA
+========================================= */
 
-    .sobre-titulo h2 {
-        font-size: 3.2rem;
-    }
+.sobre-timeline {
+    position: relative;
 
-    .sobre-texto p {
-        font-size: 1.1rem;
-    }
+    width: calc(100% - 7.6rem);
+    margin-left: 3.8rem;
+    margin-top: 80px;
+    margin-bottom: 100px;
+
+    height: 280px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* LINHA HORIZONTAL */
+
+.sobre-timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 10%;
+    right: 3%;
+    top: 50%;
+
+    height: 3px;
+
+    background-color: #F07122;
+
+    transform: translateY(-50%);
+
+    z-index: 0;
+}
+
+.seta {
+    position: absolute;
+
+    right: 3%;
+    top: 50%;
+
+    width: 15px;
+    height: 15px;
+
+    border-top: 3px solid #F07122;
+    border-right: 3px solid #F07122;
+
+    transform: translateY(-50%) rotate(45deg);
+
+    z-index: 5;
+}
+
+/* CADA EVENTO */
+
+.sobre-evento {
+    position: relative;
+
+    width: 20%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1;
+}
+
+
+/* BOLINHA */
+
+.sobre-ponto {
+    width: 25px;
+    height: 25px;
+
+    border: 3px solid #F07122;
+    border-radius: 50%;
+
+    background: white;
+
+    position: relative;
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: 
+        width 0.4s ease,
+        height 0.4s ease,
+        border-radius 0.4s ease;
+}
+
+.sobre-ponto:hover {
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+
+    border: 4px solid #f07122;
+
+    background: white;
+
+    z-index: 20;
+}
+
+
+
+/* ANO */
+
+.sobre-ponto span {
+    position: absolute;
+
+    top: 30px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: #243C93;
+
+    font-family: 'Inria Sans', sans-serif;
+
+    font-size: 1.6rem;
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+
+/* BOLINHAS PREENCHIDAS
+   2015, 2020 e 2026
+*/
+
+.sobre-evento:nth-child(1) .sobre-ponto,
+.sobre-evento:nth-child(3) .sobre-ponto,
+.sobre-evento:nth-child(5) .sobre-ponto {
+    background-color: #F07122;
+}
+
+
+/* TEXTO DOS EVENTOS */
+
+.sobre-conteudocima,
+.sobre-conteudobaixo {
+    position: absolute;
+
+    width: 240px;
+
+    text-align: center;
+
+    color: #222222;
+
+    font-family: 'Inria Sans', sans-serif;
+}
+
+
+/* TEXTO ACIMA DA LINHA */
+
+.sobre-conteudocima {
+    bottom: calc(50% + 35px);
+}
+
+
+/* TEXTO ABAIXO DA LINHA */
+
+.sobre-conteudobaixo {
+    top: calc(50% + 43px);
+}
+
+
+/* TÍTULO DO EVENTO */
+
+.sobre-conteudocima h3,
+.sobre-conteudobaixo h3 {
+    margin: 0;
+
+    font-size: 1.6rem;
+
+    line-height: 1.35;
+
+    font-weight: 500;
+
+    color: #000000;
+}
+
+.missao-visao {
+    display: flex;
+    width: 100%;
+    margin-top: 60px;
+}
+
+/* Os dois cards */
+.card-missao,
+.card-visao {
+    width: 50%;
+    min-height: 330px;
+    padding: 45px;
+}
+
+/* Card Missão */
+.card-missao {
+    background-color: #ffffff;
+    color: #243c93;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+}
+
+/* Card Visão */
+.card-visao {
+    background-color: #243c93;
+    color: #ffffff;
+}
+
+/* Títulos */
+.card-missao h2,
+.card-visao h2 {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+}
+
+/* Textos */
+.card-missao p,
+.card-visao p {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.card-missao p {
+    color: #000000;
 }

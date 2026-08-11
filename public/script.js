@@ -61,3 +61,6 @@ if (track && direita && esquerda && cards.length > 0) {
     atualizarCarrossel();
   });
 }
+
+
+
