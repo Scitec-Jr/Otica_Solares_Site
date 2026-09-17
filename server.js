@@ -14,18 +14,18 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'pages', 'index.html'));
 });
 
-app.get('/sobre', (req, res) => {
+app.get('/Sobre', (req, res) => {
     res.sendFile(path.join(__dirname, 'pages', 'sobre.html'));
 });
 
-app.get('/produtos', (req, res) => {
+app.get('/Produtos', (req, res) => {
     res.sendFile(path.join(__dirname, 'pages', 'produtos.html'));
 });
 
-app.get('/galeria', (req, res) => {
+app.get('/Galeria', (req, res) => {
     res.sendFile(path.join(__dirname, 'pages', 'galeria.html'));
 });
 
-app.get('/contato', (req, res) => {
+app.get('/Contato', (req, res) => {
     res.sendFile(path.join(__dirname, 'pages', 'contato.html'));
 });
