@@ -12,7 +12,6 @@ if (btnCarregar) {
   });
 }
 
-// Mensagem de sucesso ao enviar o formulário (COM PROTEÇÃO)
 const form = document.getElementById("form-contato");
 const msg = document.getElementById("mensagem");
 
@@ -26,7 +25,6 @@ if (form && msg) {
   });
 }
 
-// Carrossel dos cards das unidades
 const track = document.querySelector(".slider-track");
 const direita = document.querySelector(".direita");
 const esquerda = document.querySelector(".esquerda");
@@ -61,6 +59,4 @@ if (track && direita && esquerda && cards.length > 0) {
     atualizarCarrossel();
   });
 }
-
-
 

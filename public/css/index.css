@@ -234,3 +234,102 @@
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0,0,0,.2);
 }
+
+/* ===== Responsividade ===== */
+@media (max-width: 900px) {
+    .modelos-topo h2 {
+        font-size: 32px;
+    }
+
+    .cards-modelos {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex: 1 1 45%;
+        min-width: 220px;
+    }
+
+    .compromisso {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        padding: 60px 30px;
+    }
+
+    .compromisso h2 {
+        font-size: 40px;
+    }
+
+    .compromisso p {
+        font-size: 18px;
+    }
+
+    .compromisso-logo img {
+        width: 260px;
+    }
+
+    .unidades {
+        padding: 50px 20px;
+    }
+
+    .unidades h2 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .slider {
+        gap: 15px;
+    }
+
+    .slider-container {
+        width: 100%;
+    }
+
+    .card-unidade {
+        flex-direction: column;
+    }
+
+    .imagem,
+    .info {
+        width: 100%;
+    }
+
+    .imagem img {
+        max-height: 220px;
+    }
+
+    .info {
+        padding: 25px;
+    }
+
+    .info h3,
+    .cidade h3 {
+        font-size: 30px;
+    }
+
+    .seta {
+        font-size: 36px;
+        flex-shrink: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .modelos {
+        padding: 0 16px;
+    }
+
+    .modelos-topo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .card {
+        flex: 1 1 100%;
+    }
+
+    .compromisso h2 {
+        font-size: 30px;
+    }
+}

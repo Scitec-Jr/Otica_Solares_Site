@@ -15,3 +15,99 @@
 .fileira1 img:last-child {
     flex: 1;
 }
+
+.galeria-img {
+    cursor: pointer;
+    transition: filter 0.25s ease;
+}
+
+.galeria-img:hover {
+    filter: brightness(0.92);
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.lightbox.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-conteudo {
+    position: relative;
+    max-width: 90vw;
+    max-height: 85vh;
+}
+
+.lightbox-conteudo img {
+    display: block;
+    max-width: 90vw;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-fechar {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #222222;
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+    z-index: 2001;
+}
+
+.lightbox-fechar:hover {
+    transform: scale(1.08);
+}
+
+.lightbox-whatsapp {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .lightbox-fechar {
+        top: 14px;
+        right: 14px;
+        width: 36px;
+        height: 36px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 700px) {
+    .fileira1,
+    .fileira2,
+    .fileira3 {
+        flex-direction: column;
+    }
+
+    .fileira1 img:first-child,
+    .fileira1 img:last-child {
+        flex: none;
+    }
+}

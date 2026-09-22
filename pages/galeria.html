@@ -23,6 +23,13 @@
                     <img src="/images/logo.png" alt="Ótica Solares" class="header-logo">
                 </a>
             </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-btn" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
            <nav class="header-nav">
                 <a href="/">Início</a>
                 <a href="/Sobre">Sobre Nós</a>
@@ -34,17 +41,30 @@
     </header>
 
     <div class="fileira1">
-        <img src="/images/galeria1.png">
-        <img src="/images/galeria2.png">
+        <img src="/images/galeria1.png" class="galeria-img" alt="Foto da galeria 1">
+        <img src="/images/galeria2.png" class="galeria-img" alt="Foto da galeria 2">
     </div>
     <div class="fileira2">
-        <img src="/images/galeria3.png">
-        <img src="/images/galeria4.png">
-        <img src="/images/galeria5.png">
+        <img src="/images/galeria3.png" class="galeria-img" alt="Foto da galeria 3">
+        <img src="/images/galeria4.png" class="galeria-img" alt="Foto da galeria 4">
+        <img src="/images/galeria5.png" class="galeria-img" alt="Foto da galeria 5">
     </div>
     <div class="fileira3">
-        <img src="/images/galeria6.png">
-        <img src="/images/galeria7.png">
+        <img src="/images/galeria6.png" class="galeria-img" alt="Foto da galeria 6">
+        <img src="/images/galeria7.png" class="galeria-img" alt="Foto da galeria 7">
+    </div>
+
+    <!-- Lightbox: visualização ampliada da imagem clicada -->
+    <div class="lightbox" id="lightbox">
+        <button type="button" class="lightbox-fechar" id="lightbox-fechar" aria-label="Fechar">&times;</button>
+
+        <div class="lightbox-conteudo">
+            <img src="" alt="" id="lightbox-imagem">
+
+            <a href="https://wa.me/5591999999999" target="_blank" class="lightbox-whatsapp" aria-label="Falar no WhatsApp">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            </a>
+        </div>
     </div>
 
 
@@ -86,6 +106,47 @@
     </div>
 </footer>
     
+    <script>
+        (function () {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImagem = document.getElementById('lightbox-imagem');
+            const btnFechar = document.getElementById('lightbox-fechar');
+
+            function abrirLightbox(img) {
+                lightboxImagem.src = img.src;
+                lightboxImagem.alt = img.alt;
+                lightbox.classList.add('show');
+                document.body.style.overflow = 'hidden'; // trava o scroll da página atrás
+            }
+
+            function fecharLightbox() {
+                lightbox.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+
+            document.querySelectorAll('.galeria-img').forEach(function (img) {
+                img.addEventListener('click', function () {
+                    abrirLightbox(img);
+                });
+            });
+
+            btnFechar.addEventListener('click', fecharLightbox);
+
+            // fecha ao clicar fora da imagem (no fundo escuro)
+            lightbox.addEventListener('click', function (evento) {
+                if (evento.target === lightbox) {
+                    fecharLightbox();
+                }
+            });
+
+            // fecha com a tecla Esc
+            document.addEventListener('keydown', function (evento) {
+                if (evento.key === 'Escape') {
+                    fecharLightbox();
+                }
+            });
+        })();
+    </script>
     <script src="/script.js"></script>
 </body>
 

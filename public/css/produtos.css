@@ -95,21 +95,6 @@ h1 {
     background-color: #d95e12;
 }
 
-@media (max-width: 768px) {
-    .sub-header-menu .sub-header-container {
-        gap: 15px;
-        flex-wrap: wrap;
-    }
-
-    .busca-container {
-        justify-content: center;
-    }
-
-    .box-pesquisa input {
-        width: 100%;
-    }
-}
-
 .grid-produtos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -120,6 +105,13 @@ h1 {
     width: 90%;
     justify-items: center;
 
+}
+
+.card-produto-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
 }
 
 .card-produto {
@@ -244,7 +236,86 @@ h1 {
 .btn-formas-contato { background: #21409A; color: #fff; }
 .btn-formas-contato:hover { background: #183075; }
 
+@media (max-width: 1024px) {
+    .grid-produtos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .card-produto img {
+        height: 320px;
+    }
+}
+
 @media (max-width: 768px) {
+    .sub-header-menu .sub-header-container {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .busca-container {
+        justify-content: center;
+    }
+
+    .box-pesquisa input {
+        width: 100%;
+    }
+
+    h1 {
+        margin-left: 5%;
+        font-size: 28px;
+    }
+
+    .grid-produtos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .card-produto img {
+        height: 260px;
+    }
+
     .banner-contato-container { flex-direction: column; text-align: center; }
     .banner-botoes { width: 100%; max-width: 300px; }
+}
+
+@media (max-width: 520px) {
+    .grid-produtos {
+        grid-template-columns: 1fr;
+        width: 85%;
+    }
+
+    .card-produto img {
+        height: 320px;
+    }
+
+    .sub-header-menu .sub-header-container {
+        gap: 10px;
+    }
+
+    .sub-header-menu a {
+        font-size: 1.1rem;
+    }
+
+    .box-pesquisa input {
+        padding: 14px 18px;
+        font-size: 1rem;
+    }
+
+    .box-pesquisa button {
+        padding: 16px;
+    }
+
+    .info-produto h3 {
+        font-size: 1.3rem;
+    }
+
+    .btn-carregar-mais {
+        font-size: 1.2rem;
+        padding: 10px 22px;
+    }
+
+    .banner-contato h2 {
+        font-size: 1.4rem;
+    }
 }

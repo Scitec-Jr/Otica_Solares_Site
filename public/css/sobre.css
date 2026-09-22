@@ -297,3 +297,132 @@
 .VALORES {
     color: #243C93;
 }
+
+@media (max-width: 1000px) {
+    .sobre-container {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .sobre-titulo h2 {
+        font-size: 4rem;
+        margin-left: 0;
+    }
+
+    .sobre-texto {
+        max-width: 100%;
+    }
+
+    .sobre-texto p {
+        font-size: 1.2rem;
+    }
+
+    .missao-visao {
+        flex-direction: column;
+    }
+
+    .card-missao,
+    .card-visao {
+        width: 100%;
+    }
+
+    .NossosValores {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .sobre-titulo h2 {
+        font-size: 3rem;
+    }
+
+    .sobre-trajetoria,
+    .sobre-timeline {
+        margin-left: 1.2rem;
+        width: calc(100% - 2.4rem);
+    }
+
+    .sobre-timeline {
+        flex-direction: column;
+        height: auto;
+        align-items: flex-start;
+        gap: 40px;
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+
+    .sobre-timeline::before {
+        left: 12px;
+        top: 0;
+        bottom: 0;
+        right: auto;
+        width: 3px;
+        height: auto;
+        transform: none;
+    }
+
+    .seta {
+        display: none;
+    }
+
+    .sobre-evento {
+        width: 100%;
+        height: auto;
+        justify-content: flex-start;
+        padding-left: 40px;
+    }
+
+    .sobre-ponto {
+        position: absolute;
+        left: 0;
+    }
+
+    .sobre-ponto:hover {
+        width: 25px;
+        height: 25px;
+    }
+
+    .sobre-ponto span {
+        position: static;
+        transform: none;
+        margin-left: 45px;
+        white-space: normal;
+    }
+
+    .sobre-conteudocima,
+    .sobre-conteudobaixo {
+        position: static;
+        width: auto;
+        text-align: left;
+        margin-left: 45px;
+        margin-top: 8px;
+    }
+
+    .card-missao h2,
+    .card-visao h2 {
+        font-size: 2.6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .card-missao,
+    .card-visao {
+        padding: 30px;
+    }
+
+    .NossosValores {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+    }
+
+    .card-valor1,
+    .card-valor2,
+    .card-valor3,
+    .card-valor4,
+    .card-valor5,
+    .card-valor6 {
+        aspect-ratio: auto;
+        padding: 1.8rem;
+    }
+}

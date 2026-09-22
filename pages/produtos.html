@@ -23,6 +23,13 @@
                     <img src="/images/logo.png" alt="Ótica Solares" class="header-logo">
                 </a>
             </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-btn" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
          <nav class="header-nav">
                 <a href="/">Início</a>
                 <a href="/Sobre">Sobre Nós</a>
@@ -67,14 +74,14 @@
                 <h3>Modelo Pierre Caudin</h3>
             </div>
         </div>
-         <div class="card-produto">
-            <img src="/images/oculos2.png" alt="Modelo Pierre Caudin" class="card-produto-img">
+        <div class="card-produto">
+            <img src="/images/oculos2.png" alt="Polaroid Eyewear" class="card-produto-img">
             <div class="info-produto">
                 <h3>Polaroid Eyewear</h3>
             </div>
         </div>
-         <div class="card-produto">
-            <img src="/images/oculos3.png" alt="Modelo Pierre Caudin" class="card-produto-img">
+        <div class="card-produto">
+            <img src="/images/oculos3.png" alt="Seventh Street Betha Titanium - Safio" class="card-produto-img">
             <div class="info-produto">
                 <h3>Seventh Street Betha Titanium - Safio</h3>
             </div>
@@ -85,14 +92,14 @@
                 <h3>Modelo Pierre Caudin</h3>
             </div>
         </div>
-         <div class="card-produto">
-            <img src="/images/oculos2.png" alt="Modelo Pierre Caudin" class="card-produto-img">
+        <div class="card-produto">
+            <img src="/images/oculos2.png" alt="Polaroid Eyewear" class="card-produto-img">
             <div class="info-produto">
                 <h3>Polaroid Eyewear</h3>
             </div>
         </div>
-         <div class="card-produto">
-            <img src="/images/oculos3.png" alt="Modelo Pierre Caudin" class="card-produto-img">
+        <div class="card-produto">
+            <img src="/images/oculos3.png" alt="Seventh Street Betha Titanium - Safio" class="card-produto-img">
             <div class="info-produto">
                 <h3>Seventh Street Betha Titanium - Safio</h3>
             </div>
@@ -118,8 +125,22 @@
     </div>
 
     <div class="container-carregar-mais">
-        <button class="btn-carregar-mais">Carregar mais</button>
+        <button class="btn-carregar-mais" id="btn-carregar-mais">Carregar mais</button>
     </div>
+
+    <script>
+        (function () {
+            const btnCarregarMais = document.getElementById('btn-carregar-mais');
+            const ocultos = document.querySelectorAll('.card-produto.oculto');
+
+            btnCarregarMais.addEventListener('click', function () {
+                ocultos.forEach(function (card) {
+                    card.classList.remove('oculto');
+                });
+                btnCarregarMais.style.display = 'none';
+            });
+        })();
+    </script>
 
    <section class="banner-contato">
     <div class="banner-contato-container">

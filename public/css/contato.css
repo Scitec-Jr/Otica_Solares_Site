@@ -78,7 +78,6 @@
     margin-top: 5px;
 }
 
-/* Select Estilizado */
 .formulario select {
     width: 200px;
     height: 46px;
@@ -209,4 +208,78 @@
 .mensagem.show {
     opacity: 1;
     visibility: visible;
+}
+
+@media (max-width: 1000px) {
+    .contato {
+        padding: 50px 20px;
+    }
+
+    .contato-container {
+        flex-direction: column;
+        gap: 45px;
+    }
+
+    .contato-info h1 {
+        font-size: 42px;
+        text-align: center;
+    }
+
+    .contato-info {
+        text-align: center;
+    }
+
+    .telefone {
+        justify-content: center;
+    }
+
+    .redes {
+        justify-content: center;
+    }
+
+    .formulario {
+        width: 100%;
+        max-width: 520px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contato-info h1 {
+        font-size: 32px;
+    }
+
+    .unidade h3 {
+        font-size: 22px;
+    }
+
+    .telefone span,
+    .telefone a,
+    .telefone p {
+        font-size: 20px;
+    }
+
+    .redes img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .formulario {
+        padding: 22px;
+    }
+
+    .form-bottom {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .formulario select,
+    .formulario button {
+        width: 100%;
+    }
+
+    .mensagem {
+        left: 20px;
+        right: 20px;
+        text-align: center;
+    }
 }
