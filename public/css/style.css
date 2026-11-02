@@ -31,55 +31,74 @@ body {
    padding: 0;
 }
 
+
+/* ===== HEADER ===== */
+
 header {
     width: 100%;
     padding: 15px 0;
-    position: relative;
-
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.10);
 }
 
 .header-container {
-    
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 1500px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 30px;
+    box-sizing: border-box;
 }
 
 header::before {
     content: '';
     position: absolute;
-    top: 100%;                
+    top: 100%;
     left: 0;
     width: 100%;
-    height: 12px;               
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0)); 
-    pointer-events: none;      
-    z-index: 10;                 
+    height: 12px;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.18),
+        rgba(0, 0, 0, 0)
+    );
+    pointer-events: none;
+    z-index: 10;
 }
 
+/* Logo */
+
 .header-logo {
-    max-width: 200px;
+    width: 200px;
+    max-width: 100%;
     height: auto;
     display: block;
-    margin-left: 2rem;
+    flex-shrink: 0;
 }
+
+/* Navegação */
 
 .header-nav {
     display: flex;
-    gap: 80px;
+    gap: clamp(25px, 5vw, 80px);
     align-items: center;
+    justify-content: center;
     margin: 0 auto;
 }
 
 .header-nav a {
     text-decoration: none;
     color: #F07122;
-    font-size: 26px;
+    font-size: clamp(22px, 1.9vw, 29px);
     font-weight: 570;
-    opacity: 0.7    ;
+    opacity: 0.7;
+    white-space: nowrap;
     transition: opacity 0.2s ease, font-weight 0.2s ease;
 }
 
@@ -91,6 +110,134 @@ header::before {
 .header-nav a:hover {
     opacity: 1;
 }
+
+/* ===== MENU HAMBURGUER ===== */
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 20;
+    flex-shrink: 0;
+}
+
+.menu-btn span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #F07122;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Animação do botão */
+
+.menu-toggle:checked ~ .menu-btn span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.menu-toggle:checked ~ .menu-btn span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle:checked ~ .menu-btn span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+/* ===== TABLETS E CELULARES ===== */
+
+@media (max-width: 900px) {
+
+    .header-container {
+        position: relative;
+        padding: 0 25px;
+    }
+
+    .header-logo {
+        width: 160px;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .header-nav {
+        position: absolute;
+        top: calc(100% + 15px);
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+
+        margin: 0;
+        padding: 0;
+
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transition:
+            max-height 0.35s ease,
+            opacity 0.3s ease,
+            padding 0.35s ease,
+            visibility 0.3s ease;
+
+        z-index: 15;
+    }
+
+    .menu-toggle:checked ~ .header-nav {
+        max-height: 400px;
+        padding: 25px 0;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .header-nav a {
+        font-size: 23px;
+    }
+}
+
+/* ===== CELULARES PEQUENOS ===== */
+
+@media (max-width: 480px) {
+
+    header {
+        padding: 12px 0;
+    }
+
+    .header-container {
+        padding: 0 18px;
+    }
+
+    .header-logo {
+        width: 125px;
+    }
+
+    .menu-btn {
+        width: 28px;
+        height: 22px;
+    }
+
+    .header-nav a {
+        font-size: 20px;
+    }
+}
+
 
 /* ===== Menu hamburguer (mobile) ===== */
 .menu-toggle {

@@ -333,3 +333,251 @@
         font-size: 30px;
     }
 }
+
+
+/* ===== SEÇÃO DE DEPOIMENTOS ===== */
+
+.depoimentos {
+    width: 100%;
+    background-color: #dedede;
+    padding: 70px 5%;
+    box-sizing: border-box;
+}
+
+/* Título e subtítulo */
+
+.depoimentos-header {
+    max-width: 1400px;
+    margin: 0 auto 45px;
+}
+
+.depoimentos-header h2 {
+    color: #29469D;
+    font-size: 50px;
+    margin: 0 0 8px;
+    font-weight: 700;
+    font-family: "Inria Sans";
+}
+
+.depoimentos-header p {
+    color: #555;
+    font-size: 20px;
+    margin: 0;
+}
+
+/* Slider */
+
+.depoimentos-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Card */
+
+.depoimento-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 900px;
+    min-height: 260px;
+    padding: 40px 45px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Identificação do cliente */
+
+.depoimento-topo {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 22px;
+}
+
+.depoimento-foto {
+    width: 85px;
+    height: 85px;
+    min-width: 85px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+}
+
+.depoimento-identificacao h3 {
+    font-size: 25px;
+    margin: 0 0 5px;
+    color: #111;
+}
+
+.depoimento-identificacao p {
+    font-size: 18px;
+    margin: 0;
+    color: #333;
+}
+
+/* Texto do depoimento */
+
+.depoimento-texto {
+    font-size: 19px;
+    line-height: 1.5;
+    color: #222;
+    margin: 0;
+    text-align: justify;
+}
+
+/* Setas */
+
+.depoimento-seta {
+    background: transparent;
+    border: none;
+    color: #F47B20;
+    font-size: 60px;
+    cursor: pointer;
+    padding: 10px;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.depoimento-seta:hover {
+    transform: scale(1.15);
+}
+
+/* ===== ANIMAÇÃO DOS DEPOIMENTOS ===== */
+
+.depoimento-card.entrar-direita {
+    animation: entrarDireita 0.4s ease-in-out;
+}
+
+.depoimento-card.entrar-esquerda {
+    animation: entrarEsquerda 0.4s ease-in-out;
+}
+
+@keyframes entrarDireita {
+    from {
+        opacity: 0;
+        transform: translateX(45px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes entrarEsquerda {
+    from {
+        opacity: 0;
+        transform: translateX(-45px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
+@media (max-width: 900px) {
+
+    .depoimentos {
+        padding: 55px 5%;
+    }
+
+    .depoimentos-header h2 {
+        font-size: 40px;
+    }
+
+    .depoimentos-header p {
+        font-size: 17px;
+    }
+
+    .depoimentos-slider {
+        gap: 15px;
+    }
+
+    .depoimento-card {
+        padding: 30px;
+        min-height: 240px;
+    }
+
+    .depoimento-seta {
+        font-size: 42px;
+    }
+
+    .depoimento-texto {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .depoimentos {
+        padding: 40px 15px;
+    }
+
+    .depoimentos-header {
+        margin-bottom: 30px;
+    }
+
+    .depoimentos-header h2 {
+        font-size: 30px;
+    }
+
+    .depoimentos-header p {
+        font-size: 15px;
+    }
+
+    .depoimentos-slider {
+        gap: 3px;
+    }
+
+    .depoimento-card {
+        padding: 20px;
+        min-height: 220px;
+    }
+
+    .depoimento-topo {
+        gap: 12px;
+        margin-bottom: 15px;
+    }
+
+    .depoimento-foto {
+        width: 55px;
+        height: 55px;
+        min-width: 55px;
+    }
+
+    .depoimento-identificacao h3 {
+        font-size: 17px;
+    }
+
+    .depoimento-identificacao p {
+        font-size: 13px;
+    }
+
+    .depoimento-texto {
+        font-size: 14px;
+    }
+
+    .depoimento-seta {
+        font-size: 27px;
+        padding: 4px;
+    }
+}
+
+/* Respeitar preferência por movimento reduzido */
+
+@media (prefers-reduced-motion: reduce) {
+    .depoimento-card.entrar-direita,
+    .depoimento-card.entrar-esquerda {
+        animation: none;
+    }
+}
